@@ -16,11 +16,11 @@ Install the necessary packages:
 
 pip install -r requirements.txt
 
-# Data Loading
+## Data Loading
 Make sure you have the dataset in the correct location. You can download the dataset from Kaggle and place it in the data directory.
 
 
-#Data processing
+##Data processing
  
  #Loading the data from CSV file to pandas dataframe
 
@@ -32,7 +32,7 @@ column_names = ['target', 'id', 'date', 'flag', 'user', 'text']
 
 twitter_data = pd.read_csv('training.1600000.processed.noemoticon.csv', names=column_names, encoding='ISO-8859-1')
 
-# Data Preprocessing
+## Data Preprocessing
 
 The following steps are used for data preprocessing:
 
@@ -41,7 +41,7 @@ The following steps are used for data preprocessing:
 
 X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.2, stratify=Y, random_state=2)
 
-# Model Training
+## Model Training
 The following steps are used for training the model:
 
 
@@ -55,7 +55,7 @@ X_test = vectorizer.transform(X_test)
 
 model.fit(X_train, Y_train)
 
-# Model Evaluation
+## Model Evaluation
 
 The following steps are used for evaluating the model:
 
